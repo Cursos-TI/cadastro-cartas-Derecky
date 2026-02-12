@@ -5,8 +5,8 @@
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
-  int turistic_points_quantity_01, population_01, turistic_points_quantity_02, population_02;
-  float pib_01, pib_02, area_01, area_02; 
+int turistic_points_quantity_01, population_01, turistic_points_quantity_02, population_02;
+  float pib_01, pib_02, area_01, area_02, population_density_01, population_density_02, pib_per_capita_01, pib_per_capita_02; 
   char state_01, state_02, code_01[5], code_02[5], city_name_01[50], city_name_02[50];
   
 
@@ -78,6 +78,11 @@ int main() {
 
   printf("\n--------------------------------\n\n");
 
+  population_density_01 = population_01 / area_01;
+  pib_per_capita_01 = (pib_01) / population_01;
+  population_density_02 = population_02 / area_02;
+  pib_per_capita_02 = (pib_02) / population_02;
+
   // Exibindo os dados da Carta 1
   printf("Carta 1:\n");
   printf("Estado: %c\n", state_01);
@@ -86,6 +91,8 @@ int main() {
   printf("População: %d\n", population_01);
   printf("Área: %.2f km²\n", area_01);
   printf("PIB: %.2f bilhões de reais\n", pib_01);
+  printf("Densidade Populacional: %.2f hab/km²\n", population_density_01);
+  printf("PIB per capita: %.2f bilhões de reais\n", pib_per_capita_01);
   printf("Pontos Turísticos: %d\n", turistic_points_quantity_01);
 
   printf("\n\n");
@@ -97,7 +104,9 @@ int main() {
   printf("População: %d\n", population_02);
   printf("Área: %.2f km²\n", area_02);
   printf("PIB: %.2f bilhões de reais\n", pib_02);
+  printf("Densidade Populacional: %.2f hab/km²\n", population_density_02);
+  printf("PIB per capita: %.2f bilhões de reais\n", pib_per_capita_02);
   printf("Pontos Turísticos: %d\n", turistic_points_quantity_02);
-
+  
   return 0;
 } 
